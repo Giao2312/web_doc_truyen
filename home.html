@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sách Và Truyện  </title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="navbar">
+    <header >
+        
+        <nav >
+            <ul >
+                <li><a href="#">Trang Chủ</a></li>
+                <li><a href="#">Thư viện Sách </a></li>
+                <li><a href="#">Sách Hay Nên Đọc</a></li>
+                <li><a href="#">Truyện Chữ</a></li>
+                <li><a href="#">Thể Loại</a></li>
+                <li>
+                    <div class="dropdown">
+                        <span>Tài Khoản  <span class="dropdown-arrow">&#9660;</span></span>
+                        <div class="dropdown-content">
+                        <a href="#">Đăng Ký</a>
+                        <a href="#">Đăng Nhập</a>
+                    </div>
+        
+                </li>
+            </ul>
+        </nav>
+    </header>
+</div>
+    <main>
+        <section class="promo">
+            <h1>Sách  Hay Trong Tuần </h1>
+            <div class="book-list">
+                <div class="book-item">
+                    <img src="./image/book1.jpg" alt="The Designer's Cookbook">
+                    <p>Muôn Kiếp Nhân Sinh - Nguyên Phong</p>
+                </div>
+                <div class="book-item">
+                    <img src="./image/book2.jpg" alt="The Designer's Cookbook">
+                    <p> Đắc Nhân Tâm - Dale Carnegie (dịch bởi Nguyễn Hiến Lê)</p>
+                </div>
+                <div class="book-item">
+                    <img src="./image/book3.jpg" alt="The Designer's Cookbook">
+                    <p>Atomic Habits - James Clear</p>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    
+    <main>
+        <section class="promo">
+            <h1>Sách  Hay Trong Tuần </h1>
+            <div class="book-list">
+                <div class="card" onclick="showDetails('detail1')"> 
+                    <img src="./image/truyen1.jpg" alt="Sách 1"> 
+                    <h3>- Liệu thuốc chữa lành tinh</h3> 
+                    <p>Mô tả ngắn về sách 1...</p> 
+                </div> 
+                <div class="card" onclick="showDetails('detail2')"> 
+                    <img src="./image/Screenshot 2024-10-15 160643.png" alt="Sách 2">
+                     <h3>Review Cánh đồng bất tận - Miền Tây</h3>
+                      <p>Mô tả ngắn về sách 2...</p> 
+                </div> 
+                <div class="card" onclick="showDetails('detail3')"> 
+                    <img src="./image/images.jpg" alt="Sách 3">
+                     <h3>Nguyên Ngọc Từ</h3> 
+                     <p>Mô tả ngắn về sách 3...</p>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
