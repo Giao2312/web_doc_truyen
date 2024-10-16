@@ -13,30 +13,47 @@ body {
     position: relative;
     display: inline-block;
 }
+
+.dropbtn {
+    background-color: #1e90ff;
+    color: white;
+    padding: 16px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #1e90ff;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    border-radius: 4px;
 }
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-.dropdown-arrow {
-    font-size: 60px;
-    margin-left: 10px;
-}
+
 .dropdown-content a {
-    color: black;
-    padding: 16px 20px;
+    color: white;
+    padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
+
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #87cefa;
 }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #87cefa;
+}
+
+
 header {
     display: flex;
     justify-content: space-between;
@@ -55,22 +72,36 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 18px;
 }
 nav ul li {
     display: inline;
+    gap: 40px; /* Increased gap */
+    font-size: 1.4em; /* Larger font size */
+    padding: 20px
 }
 nav ul li a {
     text-decoration: none;
     color: #fff;
 }
-.navbar li.ati a { display:inline-block;
-   
-    color:#FFF; background:#0471e7; border-radius:4px;
-      text-align:center;/*background:url(../images/border-li.png) right center no-repeat;*/ 
-      white-space:nowrap;     
-      font: size 15px;
-      margin:0 1px 0 0; 
-      position:relative; 
-      font-family:Roboto Bold 
+.navbar li.pointer a { 
+    display:inline-block;
+    color:#FFF; border-radius:4px;
+    text-align:center;/*background:url(../images/border-li.png) right center no-repeat;*/ 
+    white-space:nowrap;     
+    font: size 18px;
+    margin:0 5px 0 0; 
+    position:relative; 
+    font-family:Roboto Bold ;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 16px;
 }
+
+.navbar li.pointer a:hover {
+    background-color: #0471e7;
+    color: #fff;
+}
+
+
