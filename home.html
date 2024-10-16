@@ -33,6 +33,19 @@
     <main>
         <section class="promo">
             <h1>Sách  Hay Trong Tuần </h1>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <img src="./image/book1.jpg" alt="Book 1">  <p class = "text">Muôn Kiếp Nhân Sinh - Nguyên Phong</p>>
+                    <img src="./image/book2.jpg" alt="Book 2">
+                    <img src="./image/book3.jpg" alt="Book 3">
+                    <img src="./image/38-la-thu-mck4-994.jpg" alt="Book 4">
+                    <img src="./image/Tieu_thuyet_Nha_Gia_Kim_169e9966ba.jpg" alt="Book 5">
+              </div>
+              <button class="prev" onclick="prevSlide()">&#10094;</button>
+              <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+                
+        
             <div class="book-list">
                 <div class="book-item">
                     <img src="./image/book1.jpg" alt="The Designer's Cookbook">
@@ -53,27 +66,35 @@
     
     <main>
         <section class="promo">
-            <h1>Sách  Hay Trong Tuần </h1>
-            <div class="book-list">
-                <div class="card" onclick="showDetails('detail1')"> 
-                    <img src="./image/truyen1.jpg" alt="Sách 1"> 
-                    <h3>- Liệu thuốc chữa lành tinh</h3> 
-                    <p>Mô tả ngắn về sách 1...</p> 
-                </div> 
-                <div class="card" onclick="showDetails('detail2')"> 
-                    <img src="./image/Screenshot 2024-10-15 160643.png" alt="Sách 2">
-                     <h3>Review Cánh đồng bất tận - Miền Tây</h3>
-                      <p>Mô tả ngắn về sách 2...</p> 
-                </div> 
-                <div class="card" onclick="showDetails('detail3')"> 
-                    <img src="./image/images.jpg" alt="Sách 3">
-                     <h3>Nguyên Ngọc Từ</h3> 
-                     <p>Mô tả ngắn về sách 3...</p>
-                </div>
+            <h1>Truyện  Hay Trong Tuần </h1>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <img src="./image/truyen1.jpg" alt="Truyện 1">
+                    <img src="./image/truyen2.jpg" alt="Truyện 2">
+                    <img src="./image/truyen3.png" alt="Truyện 3">
+              </div>
+              <button class="prev" onclick="prevSlide()">&#10094;</button>
+              <button class="next" onclick="nextSlide()">&#10095;</button>
             </div>
+              
+        
+                <div class="book-list">
+                    <div class="book-item">
+                        <img src="./image/truyen1.jpg" alt="The Designer's Cookbook">
+                        <p>Muôn Kiếp Nhân Sinh - Nguyên Phong</p>
+                    </div>
+                    <div class="book-item">
+                        <img src="./image/truyen2.jpg" alt="The Designer's Cookbook">
+                        <p> Đắc Nhân Tâm - Dale Carnegie (dịch bởi Nguyễn Hiến Lê)</p>
+                    </div>
+                    <div class="book-item">
+                        <img src="./image/truyen3.png" alt="The Designer's Cookbook">
+                        <p>Atomic Habits - James Clear</p>
+                    </div>
+                </div>
             
         </section>
     </main>
-    <script src="scripts.js"></script>
+    <script src="home.js"></script>
 </body>
 </html>
