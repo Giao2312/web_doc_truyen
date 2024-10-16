@@ -141,3 +141,13 @@ button.prev {
 button:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
+.navbar li.ati a { 
+    display:inline-block;
+    color:#FFF; background:#0471e7; border-radius:4px;
+    text-align:center;/*background:url(../images/border-li.png) right center no-repeat;*/ 
+    white-space:nowrap;     
+    font: size 15px;
+    margin:0 1px 0 0; 
+    position:relative; 
+    font-family:Roboto Bold 
+}
