@@ -58,6 +58,9 @@ nav ul {
 }
 nav ul li {
     display: inline;
+    gap: 40px; /* Increased gap */
+    font-size: 1.4em; /* Larger font size */
+    padding: 20px
 }
 nav ul li a {
     text-decoration: none;
