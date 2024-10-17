@@ -4,7 +4,12 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+body ,html {
+    height: 100%;
+}
 body {
+    display: flex;
+    flex-direction: column;
     background-color: #000;
     color: #fff;
 }
@@ -74,27 +79,172 @@ main {
     text-align: center;
 }
 .promo {
-    background: linear-gradient(90deg, #006600, #003366);
+    display: flex;
+    flex-grow: 1;
+    background: linear-gradient(90deg, #49cd54, #78a3ce);
     justify-content: center;
     align-items: center;
+    height: auto !important;
     padding: 40px;
     border-radius: 8px;
 }
 .book-list {
+    /*can giua fame */
     display: flex;
-    justify-content: center;
     gap: 20px;
-    margin: 20px 0;
+    flex-wrap: wrap;
+    margin: 40px 0 0 10px;
+    flex :1;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 40px 0 0 10px;
+    flex-wrap: wrap;
+
 }
+/* chuyển tất class = "book-list" xuống dưới ảnh phần class ="promo"*/
+
 .book-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content within the flex container */
     background-color: #222;
     padding: 10px;
     border-radius: 8px;
+    margin-bottom: 20px;  /* Centering the text */
+    text-align: center; /* Center*/
+    transition: background-color 0.3s;
+    transition: transform 0.3s;
+    max-width: 300px; /* Set a maximum width for each book item */
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+    transform: translateY(0); /* Reset the transform */
+    cursor: pointer; /* Change cursor to pointer */
+    position: relative; /* Position relative for the hover effect */
+    overflow: hidden; /* Hide overflow for the image */
+
 }
+
 .book-item img {
-    max-width: 100px;
+    width: 100px; /* Set a consistent width */
     height: auto;
+    border: none;
+    object-fit: cover;
+    display: block; /* Ensure the image takes up block space */
+    margin-bottom: 10px;
+    transition: transform 0.3s;
 }
+
+.book-item p {
+    margin-top: 10px; /* Space between image and title */
+    font-size: 1.1em;
+}
+ .book-item:hover img {
+    transform: scale(1.05); /* Enlarge the image */
+  }
+  .book-item:hover p {
+    transform: translateY(-5px); /* Move the text up */
+  }
+  .book-item:hover.book-details {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+  /*đưa phần class = "book-list trên xuống dưới phần class ="carouseul"*/
+  .book-details {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    color: #fff;
+    border-radius: 8px;
+    transform: translateY(100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+ .book-item:hover.book-details {
+
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+  
+.book-list-left {
+    flex : 3;
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 0 20px 10px;
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+    @media only screen and (max-width: 480px) {
+      flex-direction: column;
+    }
+
+}
+.book-list-right{
+    flex:1;
+    padding: 0 0;
+    background-color: #222;
+    overflow-y : auto;
+    border-left: 1px solid #444;
+}
+
+
+  /* CSS for the Book Details Section */
+  section.book-details {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  .book-list-right{
+    flex :3;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+    border-left: 1px solid #444;
+    gap: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+    @media only screen and (max-width: 480px) {
+      flex-direction: column;
+    }
+
+  }
+  section.book-details h2 {
+    color: #fff;
+    text-align: center;
+  }
+  section.book-details p {
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+  }
+ 
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  footer p {
+    margin: 0;
+  }
 .shop-button {
     background-color: #00cc00;
     color: #fff;
@@ -107,24 +257,40 @@ main {
 .shop-button:hover {
     background-color: #009900;
 }
+
 .carousel {
     position: relative;
-    width: 80%;
+    width: 100%;
     max-width: 600px;
-    height: 400px;
+    height: 700px;
     margin: 0 auto; /* Center the carousel */
     overflow: hidden;
+    
+    
 }
 .carousel-inner {
     position: relative;
-    width: 100%;
-    height: 100%;
+   
     display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+
+   
+
 }
 .carousel-inner img {
     min-width: 100%;
     height: 100%;
-    border-radius: 15px 50px;
+    border-radius: 20px 50px;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 0;
+    z-index: 1;
+    &:hover {
+        opacity: 0.8;
+    }
 }
 button.next, button.prev {
     position: absolute;
@@ -165,4 +331,171 @@ button:hover {
 .navbar li.pointer a:hover {
     background-color: #0471e7;
     color: #fff;
+}
+
+
+.book-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px 0;
+    font-size: 100%;
+}
+.book-item{
+    background-color: #222;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 100%;
+}
+
+@media (max-width: 1024px) {
+   .book-list {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+.fame {
+    position: absolute;
+    height: auto !important;
+    line-height: 30px; ;
+    right: 50px;
+    width: 400px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    margin: auto;
+    /*can giua  flex */
+    border-radius: 10px;
+    
+    font-size: 24px;
+    
+    opacity: 0.8;
+    transition: opacity 0.5s ease-in-out;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+    
+    transform-origin: right bottom;
+    transform: translateX(-50%);
+    
+    transform-origin: right bottom;
+
+    animation: fame 10s infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    animation-direction: alternate;
+
+    @keyframes fame {
+        0% {
+            transform: translateY(150%);
+        }
+        100% {
+            transform: translateY(-100%);
+        }
+    }
+}
+.fame1{
+    
+    position: static !important;
+    right: 50px;
+    width: auto !important;
+    border: 3px solid #73AD21;
+    padding: 0px;
+    margin: auto;
+    /*can giua  flex */
+    border-radius: 10px;
+    background-color: transparent;
+
+    font-size: 20px;
+    opacity: 0.8;
+    transition: opacity 0.5s ease-in-out;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+    
+    transform-origin: right bottom;
+    transform: translateX(-50%);
+    
+    animation: fame 10s infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    animation-direction: alternate;
+
+    @keyframes fame {
+        0% {
+            transform: translateY(150%);
+        }
+        100% {
+            transform: translateY(-100%);
+        }
+    }
+
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: relative; /* Changed from fixed to relative */
+    width: 100%;
+    margin-top: auto; /* Ensures footer is at the bottom of the page when content is short */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 14px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 10px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
 }
