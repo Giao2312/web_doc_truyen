@@ -1,73 +1,76 @@
 * {
-    font-family: 'Poppins', sans-serif;
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
+
 body {
-    user-select: none;
-    overflow-y: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: hsl(218deg 50% 91%);
     height: 100vh;
+    background: #000;
+    color: #fff;
 }
-.container {
-    background: #fff;
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
-    border-radius: 30px;
-    box-shadow: 0 0 2em hsl(231deg 62% 94%);
+
+.login-container {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     width: 300px;
-}
-h2 {
     text-align: center;
-    margin-bottom: 1em;
 }
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
 .inputBox {
-    margin-bottom: 1em;
+    margin-bottom: 15px;
 }
+
 .inputBox input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-}
-.inputBox input::placeholder {
-    color: hsl(0deg 0% 60%);
-}
-button {
-    padding: 1em;
-    background: hsl(233deg 36% 38%);
-    color: hsl(0 0 100%);
     border: none;
-    border-radius: 30px;
-    font-weight: 600;
-    cursor: pointer;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
 }
-button:hover {
-    background: hsl(233deg 36% 30%);
-}
+
 .links {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1em;
+    margin-bottom: 20px;
 }
+
 .links a {
-    color: hsl(233deg 36% 38%);
+    color: #00cc00;
     text-decoration: none;
     font-size: 0.9em;
 }
+
 .links a:hover {
     text-decoration: underline;
 }
-#message {
-    color: red;
+
+.inputBox input[type="submit"] {
+    background: #00cc00;
+    color: #000;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-#register-suggestion {
-    color: hsl(233deg 36% 38%);
+.inputBox input[type="submit"]:hover {
+    background: #009900;
+}
+
+#message {
+    color: red;
+    margin-top: 10px;
 }

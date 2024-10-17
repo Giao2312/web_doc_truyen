@@ -1,49 +1,74 @@
-body {  
-    font-family: Arial, sans-serif;  
-    background-color: #f4f4f4;  
-    margin: 0;  
-    padding: 20px;  
-}  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-h1 {  
-    color: #333;  
-}  
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+}
 
-form {  
-    background: #fff;  
-    padding: 20px;  
-    border-radius: 5px;  
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
-}  
+.register-container {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    text-align: center;
+}
 
-input[type="text"],  
-input[type="email"],  
-input[type="password"] {  
-    width: 30%;  
-    padding: 10px;  
-    margin: 10px 0;  
-    border: 1px solid #ccc;  
-    border-radius: 4px;  
-}  
+.register-container h2 {
+    margin-bottom: 20px;
+}
 
-input[type="submit"] {  
-    background-color: #5cb85c;  
-    color: white;  
-    padding: 10px;  
-    border: none;  
-    border-radius: 4px;  
-    cursor: pointer;  
-}  
+.inputBox {
+    margin-bottom: 15px;
+}
 
-input[type="submit"]:hover {  
-    background-color: #4cae4c;  
-}  
+.inputBox input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+}
 
-a {  
-    color: #5cb85c;  
-    text-decoration: none;  
-}  
+.links {
+    margin-top: 20px;
+}
 
-a:hover {  
-    text-decoration: underline;  
+.links a {
+    color: #00cc00;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.inputBox input[type="submit"] {
+    background: #00cc00;
+    color: #000;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.inputBox input[type="submit"]:hover {
+    background: #009900;
+}
+
+#message {
+    color: red;
+    margin-top: 10px;
 }
