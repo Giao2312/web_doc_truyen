@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Home.css" />
+    <script src="Home.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <header>
+        <nav>
+          <ul>
+            <li><a href="#">Trang Chủ</a></li>
+            <li class="ati"><a href="#">Trang Chủ</a></li>
+            <li><a href="#">Thư viện Sách Và Truyện </a></li>
+            <li>
+              <a href="./SachHayNenDoc/SachHayNenDoc.html">Sách Hay Nên Đọc</a>
+            </li>
+            <li><a href="#">Truyện Chữ</a></li>
+            <li><a href="#">Truyện Hay Nên Đọc </a></li>
+            <li>
+              <div>
+                <div class="dropdown">
+                  <span>Thể loại<span class="dropdown-arrow"></span></span>
+                  <div class="dropdown-content">
+                    <a href="Type1.html">Kiếm Hiệp</a>
+                    <a href="#">Kinh Dị</a>
+                    <a href="#">Ma Giáo</a>
+                    <a href="#">Dị Giới</a>
+                    <a href="Noval.html">Tiểu Thuyết</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown">
+                <span
+                  >Tài Khoản <span class="dropdown-arrow">&#9660;</span></span
+                >
+                <div class="dropdown-content">
+                  <a href="SighUp.html">Đăng Ký</a>
+                  <a href="LogIn.html">Đăng Nhập</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <main>
+      <section class="promo">
+        <h1>Sách Hay Trong Tuần</h1>
+        <div class="carousel">
+          <div class="carousel-inner">
+            <img src="./image/book1.jpg" alt="Book 1" />
+            <img src="./image/book2.jpg" alt="Book 2" />
+            <img src="./image/book3.jpg" alt="Book 3" />
+            <img src="./image/38-la-thu-mck4-994.jpg" alt="Book 4" />
+            <img
+              src="./image/Tieu_thuyet_Nha_Gia_Kim_169e9966ba.jpg"
+              alt="Book 5"
+            />
+          </div>
+          <button class="prev" onclick="prevSlide()">&#10094;</button>
+          <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+
+        <div class="book-list">
+          <div class="book-item">
+            <img src="./image/book1.jpg" alt="The Designer's Cookbook" />
+            <p>Muôn Kiếp Nhân Sinh - Nguyên Phong</p>
+          </div>
+          <div class="book-item">
+            <img src="./image/book2.jpg" alt="The Designer's Cookbook" />
+            <p>Đắc Nhân Tâm - Dale Carnegie (dịch bởi Nguyễn Hiến Lê)</p>
+          </div>
+          <div class="book-item">
+            <img src="./image/book3.jpg" alt="The Designer's Cookbook" />
+            <p>Atomic Habits - James Clear</p>
+          </div>
+          <div class="book-item">
+            <img
+              src="./image/38-la-thu-mck4-994.jpg"
+              alt="The Designer's Cookbook"
+            />
+            <p>38 Bức Thư Rockefeller Viết Cho Con Trai</p>
+          </div>
+          <div class="book-item">
+            <img
+              src="./image/Tieu_thuyet_Nha_Gia_Kim_169e9966ba.jpg"
+              alt="The Designer's Cookbook"
+            />
+            <p>Tieu Thuyết Nha Gia Kim</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <main>
+      <section class="promo">
+        <h1>Truyện Hay Trong Tuần</h1>
+        <div class="carousel">
+          <div class="carousel-inner">
+            <img src="./image/truyen1.jpg" alt="Truyện 1" />
+            <img src="./image/truyen2.jpg" alt="Truyện 2" />
+            <img src="./image/truyen3.png" alt="Truyện 3" />
+          </div>
+          <button class="prev" onclick="prevSlide">&#10094;</button>
+          <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+
+        <div class="book-list">
+          <div class="book-item">
+            <img src="./image/truyen1.jpg" alt="The Designer's Cookbook" />
+            <p>Muôn Kiếp Nhân Sinh - Nguyên Phong</p>
+          </div>
+          <div class="book-item">
+            <img src="./image/truyen2.jpg" alt="The Designer's Cookbook" />
+            <p>Đắc Nhân Tâm - Dale Carnegie (dịch bởi Nguyễn Hiến Lê)</p>
+          </div>
+          <div class="book-item">
+            <img src="./image/truyen3.png" alt="The Designer's Cookbook" />
+            <p>Atomic Habits - James Clear</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="home.js"></script>
+  </body>
+  <hr />
+  <footer id="footer">
+    <p>Mọi trách nhiệm bản quyền thuộc về</p>
+    <div class="asshole">
+      <a
+        href="https://www.facebook.com/profile.php?id=100047101034111"
+        target="_blank"
+        data-type="link"
+        ><img src="IMG_20221229_140340.jpg" height="241" />Đỗ Tràng Giao</a
+      >
+      <a
+        href="https://www.facebook.com/bang.ngochi.50"
+        target="_blank"
+        data-type="link"
+        ><img src="IMG_20221026_184742.jpg" height="241" />Ngô Chí Bằng (=!)</a
+      >
+      <a
+        href="https://www.facebook.com/profile.php?id=100019768636980"
+        target="_blank"
+        data-type="link"
+        ><img
+          src="IMG_20230209_205646.jpg"
+          alt="Instagram"
+          height="241"
+        />Nguyễn Thanh Bình</a
+      >
+    </div>
+    <div>
+      <a>mọi vấn đề bản quyền vui lòng KHÔNG LIÊN HỆ anh: Hoàng Văn Thăng</a>
+    </div>
+  </footer>
+</html>
